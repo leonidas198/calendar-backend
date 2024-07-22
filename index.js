@@ -1,7 +1,7 @@
 const express = require('express');
+require('dotenv').config();
 const cors = require('cors');
 const { dbConnection } = require('./database/config');
-require('dotenv').config();
 
 
 
@@ -24,7 +24,7 @@ app.use( express.json() );
 
 // Rutas
 app.use('/api/auth', require('./routes/auth'));
-// TODO: CRUD: de eventos
+
 app.use('/api/events', require('./routes/events'));
 
 
