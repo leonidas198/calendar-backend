@@ -3,13 +3,11 @@ const bcrypt = require('bcryptjs');
 const Usuario = require('../models/Usuario');
 const { generarJWT } = require('../helpers/jwt');
 
-
 const createUser = async( req, res = response ) => {
 
     const { email, password } = req.body;
 
     try {
-        
         let user = await Usuario.findOne({ email });
         
         if( user ) {
