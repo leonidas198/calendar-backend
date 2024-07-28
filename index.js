@@ -30,7 +30,7 @@ app.use('/api/events', require('./routes/events'));
 
 app.use('*', ( req, res ) => {
     res.sendFile( path.join( __dirname, 'public/index.html' ) )
-})
+});
 
 
 
